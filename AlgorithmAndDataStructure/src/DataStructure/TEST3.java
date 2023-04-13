@@ -6,6 +6,31 @@ class LinkedList5 {
     static class Node {
         int data;
         Node next = null;
+        
+        Node() {}
+        
+        Node(int d) {
+        	data = d;
+        }
+        
+        public Node get(int d) {
+        	Node n = this;
+        	for(int i = 0; i < d; i++) {
+        		n = n.next;
+        	}
+        	return n;
+        }
+        
+        public Node addNext(int d) {
+        	Node n = new Node(d);
+        	this.next = n;
+        	return n;
+        }
+        
+        public Node addNext(Node n) {
+        	this.next = n;
+        	return n;
+        }
     }
 
     LinkedList5() {
