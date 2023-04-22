@@ -26,7 +26,7 @@ class Tree {
 	}
 	
 	public void inorder(Node2 node) {
-		if(node != null) {
+		if(node != null) { 
 			inorder(node.left);
 			System.out.println(node.data);
 			inorder(node.right);
